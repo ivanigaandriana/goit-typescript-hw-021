@@ -1,0 +1,10 @@
+.searchForm{
+   text-align: center;
+   margin-top: 30px;
+}
+.searchFormImput{
+    border: 1px solid blue;
+    padding: 5px;
+    margin-right: 10px;
+    width: 20%;
+}
