@@ -12,7 +12,7 @@ const ImageModal = ({ isOpen, onClose, selectedImage }) => {
   return (
     <Modal
       isOpen={isOpen}
-      onRequestClose={(handleCloseModal, onClose)}
+      onRequestClose={(handleCloseModal)}
       overlayClassName={css.modalOverlay}
       className={css.modal}
       ariaHideApp={true}

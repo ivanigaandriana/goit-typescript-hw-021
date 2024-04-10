@@ -3,8 +3,8 @@ import css from './ImageCard.module.css';
 
 function ImageCard({ small, alt_description, description, likes, onClick }) {
   return (
-    <li className={css.imageCard} onClick={onClick}>
-      <img className={css.imageCardImg} src={small} alt={alt_description} />
+    <li className={css.imageCard}>
+      <img className={css.imageCardImg} src={small} alt={alt_description}  onClick={onClick} />
       <br />
       <h2 className={css.imageCardTitle}>Title: {alt_description}</h2>
       <br />

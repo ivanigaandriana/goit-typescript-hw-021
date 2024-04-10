@@ -1,7 +1,7 @@
 // import css from './App.module.css'
 import  { useState, useEffect } from 'react';
 import { requestImagesByQuery } from './components/services/api';
-import SearchBar from './components/SearcBar/SearcBar';
+import Searchbar from './components/SearchBar/SearchBar';
 import ImageGallery from './components/ImageGallery/ImageGallery';
 import Loader from './components/Loader/Loader';
 import ErrorMessage from './components/ErrorMessage/ErrorMessage';
@@ -64,7 +64,7 @@ function App() {
   return (
     <div >
       <h1></h1>
-      <SearchBar onSetSearchQuery={onSetSearchQuery} />
+      <Searchbar onSetSearchQuery={onSetSearchQuery} />
       {isError && <ErrorMessage />}
       {isLoading && <Loader />}
       <ImageGallery images={pictures} openModal={openModal} />

@@ -1,7 +1,7 @@
 
 import { ErrorMessage, Field, Form, Formik } from 'formik'
 import * as Yup from 'yup'
-import css from '../SearcBar/SearcBar.module.css'
+import css from './SearchBar.module.css'
 
 const searchFormSchema = Yup.object().shape({
   searchTerm: Yup.string().required('Please enter a search term'),
@@ -39,5 +39,5 @@ const SearchBar = ({ onSetSearchQuery }) => {
   )
 }
 
-export default SearchBar
+export default SearchBar;
 
