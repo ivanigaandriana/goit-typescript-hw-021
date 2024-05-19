@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.12",
     "axios": "^1.6.8",
     "formik": "^2.4.5",
     "modern-normalize": "^2.0.0",
@@ -18,11 +20,12 @@
     "react-hot-toast": "^2.4.1",
     "react-loader-spinner": "^6.1.6",
     "react-modal": "^3.16.1",
+    "typescript": "^5.4.5",
     "yup": "^1.4.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
