@@ -1,6 +1,6 @@
 // import css from './App.module.css'
-import  { useState, useEffect } from 'react';
-import { requestImagesByQuery } from './components/services/api';
+import React ,{ useState, useEffect } from 'react';
+import { requestImagesByQuery, IUnsplashImage } from './components/services/api';
 import Searchbar from './components/SearchBar/SearchBar';
 import ImageGallery from './components/ImageGallery/ImageGallery';
 import Loader from './components/Loader/Loader';
@@ -11,14 +11,14 @@ import ImageModal from './components/ImageModal/ImageModal';
 
 
 function App() {
-  const [pictures, setPictures] = useState([])
-  const [isLoading, setIsLoading] = useState(false)
-  const [isError, setIsError] = useState(false)
-  const [query, setQuery] = useState('')
-  const [page, setPage] = useState(1)
-  const [hasMoreImages, setHasMoreImages] = useState(true)
-  const [selectedImage, setSelectedImage] = useState(null)
-  const [modalIsOpen, setModalIsOpen] = useState(false)
+  const [pictures, setPictures] = useState<IUnsplashImage[]>([])
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [isError, setIsError] = useState<boolean | null>(false)
+  const [query, setQuery] = useState<string>('')
+  const [page, setPage] = useState<number>(1)
+  const [hasMoreImages, setHasMoreImages] = useState<boolean>(true)
+  const [selectedImage, setSelectedImage] = useState<IUnsplashImage | null>(null)
+  const [modalIsOpen, setModalIsOpen] = useState<boolean>(false)
 
   useEffect(() => {
     if (query.length === 0) return
@@ -26,7 +26,7 @@ function App() {
     async function fetchImagesByQuery() {
       setIsLoading(true)
       try {
-        const data = await requestImagesByQuery(query, page)
+        const data = await requestImagesByQuery (query, page)
         if (data.length < 10) {
           setHasMoreImages(false)
         }
@@ -48,7 +48,7 @@ function App() {
     setPage(page + 1)
   }
 
-  const onSetSearchQuery = (searchTerm) => {
+  const onSetSearchQuery = (searchTerm: string) => {
     if (searchTerm === query) return
     setQuery(searchTerm)
     setPage(1)
@@ -56,7 +56,7 @@ function App() {
     setPictures([])
   }
 
-  const openModal = (image) => {
+  const openModal = (image: IUnsplashImage) => {
     setSelectedImage(image)
     setModalIsOpen(true)
   }

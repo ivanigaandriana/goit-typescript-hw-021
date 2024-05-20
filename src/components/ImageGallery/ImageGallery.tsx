@@ -1,8 +1,9 @@
+import React from 'react'
 import css from './ImageGallery.module.css'
-
+import { ImageGalleryProps } from './ImageGallery.types'
 import ImageCard from '../ImageCard/ImageCard'
 
-function ImageGallery({ images, openModal }) {
+const ImageGallery: React.FC<ImageGalleryProps>=({ images, openModal })=>{
   return (
     <ul className={css.imageGallery}>
       {Array.isArray(images) && images.length > 0 ? (

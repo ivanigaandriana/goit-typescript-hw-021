@@ -1,5 +1,6 @@
+import React from 'react';
 import {CirclesWithBar} from 'react-loader-spinner';
-const Loader =()=>{
+const Loader:React.FC =()=>{
     return(
         
         <CirclesWithBar

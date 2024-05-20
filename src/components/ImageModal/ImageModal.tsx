@@ -1,8 +1,10 @@
-import css from '../ImageModal/ImageModal.module.css'
-import Modal from 'react-modal'
+import React from 'react';
+import css from './ImageModal.module.css';
+import Modal from 'react-modal';
+import { ImageModalProps } from './ImageModal.types';
 
 
-const ImageModal = ({ isOpen, onClose, selectedImage }) => {
+const ImageModal: React.FC<ImageModalProps> = ({ isOpen, onClose, selectedImage }) => {
   if (!selectedImage) return null
 
   const handleCloseModal = () => {
