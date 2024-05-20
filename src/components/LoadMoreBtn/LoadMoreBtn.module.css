@@ -8,7 +8,13 @@
     height: 30px;
     border-radius: 10px;
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 20px;
     background-color: gray;
     color: white;
+}
+.LoadMoreBtn:hover,
+.LoadMoreBtn:focus {
+    background-color:aqua;
+    color: black;
+    transition-duration: 0.5s;
 }

@@ -69,7 +69,7 @@ function App() {
       {isLoading && <Loader />}
       <ImageGallery images={pictures} openModal={openModal} />
       {hasMoreImages && pictures.length > 0 && (
-        <LoadMoreBtn onSetPage={onSetPage} />
+        <LoadMoreBtn onSetPage={onSetPage} disable={isLoading}/>
       )}
       {pictures.length === 0 && query !== '' && <h1>No images found</h1>}
       <ImageModal
